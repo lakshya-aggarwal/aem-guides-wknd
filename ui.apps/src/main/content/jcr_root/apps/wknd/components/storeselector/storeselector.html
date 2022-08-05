@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='tanishq.storedetails'}" />
+</sly>
+
+<div class="row">
+    <div class="col-12 mt-0 col-sm-12 col-md-11 offset-md-1 mb-3 form-box">
+        <form class="">
+            <div class="row rwd-styling-store-form">
+                <div class="col-md-4 col-sm-12 form-element">
+                    <select id="citySelect" class="form-select"><option>Choose City</option></select>
+                </div>
+                <div class="col-md-4 col-sm-12 form-element">
+                    <select id="storeSelect" class="form-select"><option value="null">Choose Store</option></select>
+                </div>
+                <div class="col-md-4 col-sm-12 form-element">
+                    <div id="common-button"><button class="myBtn primary-btn false"><span class="">Use My Current Location</span></button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
