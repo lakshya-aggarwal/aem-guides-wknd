@@ -1,0 +1,211 @@
+/* :root {
+    --heroBackgroundColor: #28cf33;
+    --heroBackgroundImageUrl: url('https://35254.cdn.cke-cs.com/H5e7puEV3tccWe5K2oga/images/4eaa4a865470725cbca93fc755e42180e256f12842b105bc.png');
+} */
+
+#hero {
+    background-color: var(--heroBackgroundColor, #F9F7F5);
+    font-family: 'Fidelity Sans', Helvetica, sans-serif !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+#hero h1 {
+    color: var(--fds-text-fds-text-fill, #141414);
+    /* fds-display-page */
+    font-family: 'Roboto Slab';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 52px;
+    /* 108.333% */
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+#hero p {
+    color: var(--fds-text-fds-text-fill, #141414);
+    /* fds-paragraph */
+    font-family: "Fidelity Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 171.429% */
+    letter-spacing: -0.25px;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.heroInner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--heroBackgroundColor, #F9F7F5);
+}
+
+.hero-card-wrapper,
+.image-box-wrapper {
+    flex-basis: 50%;
+}
+
+.hero-card {
+    margin: 50px 20px;
+    padding: 20px;
+}
+
+.heroMobileImage {
+    display: none;
+}
+
+.eyebrow {
+    font-size: 1rem;
+    color: #368727;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.image-box-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0;
+}
+
+.image-box {
+    max-width: 520px;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 25px;
+    width: 356px;
+    height: 365px;
+    object-fit: cover;
+    object-position: 80% center;
+}
+
+.hide-image-on-right .heroInner {
+    min-height: 300px;
+    background-image: var(--heroBackgroundImageUrl, url('https://35254.cdn.cke-cs.com/H5e7puEV3tccWe5K2oga/images/4eaa4a865470725cbca93fc755e42180e256f12842b105bc.png'));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65% 20%;
+    transition: all .5s ease-in-out;
+}
+
+.hide-image-on-right .image-box {
+    display: none;
+}
+
+.hide-image-on-right .hero-card {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 10px 10px 22px -3px rgba(0, 0, 0, 0.24);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    .hero-card-wrapper {
+        width: 65%;
+    }
+
+    .image-box-wrapper {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .heroInner {
+        flex-direction: column;
+    }
+
+    .hero-card,
+    .hide-image-on-right .hero-card {
+        margin: 0;
+        border-radius: 0;
+        max-width: none;
+        background-color: var(--heroBackgroundColor, none);
+        box-shadow: none;
+    }
+
+    .image-box {
+        display: none;
+    }
+
+    .heroMobileImage {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+}
+
+.wp-btn-green {
+    color: #FFFFFF;
+    background-color: #368727;
+    border: solid 1px #368727;
+    border-radius: 100px;
+    margin: 0;
+    padding: .6em 1.2em;
+    display: inline-block;
+    margin-top: 10px;
+    min-width: 150px;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+a.wp-btn-green {
+    text-decoration: none;
+}
+
+.wp-btn-green:hover {
+    background-color: #2B6B1E;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+
+.wp-btn-white {
+    color: #368727;
+    background-color: #fff;
+    border: solid 1px #fff;
+    border-radius: 100px;
+    margin: 0;
+    padding: .6em 1.2em;
+    display: inline-block;
+    margin-top: 10px;
+    min-width: 150px;
+}
+
+a.wp-btn-white {
+    text-decoration: none;
+}
+
+.wp-btn-white:hover {
+    background-color: #fff;
+    color: #368727 !important;
+    text-decoration: none !important;
+}
+.p-top-sm{
+    padding-top: 20px;
+}

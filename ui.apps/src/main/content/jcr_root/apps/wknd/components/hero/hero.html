@@ -1,0 +1,52 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='wi-sites.components'}"/>
+
+<div data-sly-use.hero="com.adobe.aem.guides.wknd.core.models.Hero"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
+
+    <section id="hero" class="${hero.imageToRight ? 'hide-image-on-left' : 'hide-image-on-right'}">
+        <div class="heroInner" style="
+            --heroBackgroundImageUrl: url('${hero.fileReference @ context='uri'}');
+            --heroBackgroundColor:${hero.bgolor @ context='styleString'};
+        ">
+            <div class="heroMobileImage">
+                <img src="${hero.fileReference}" alt="Hero mobile image" />
+            </div>
+            <div class="hero-card-wrapper">
+                <div class="hero-card">
+                    <sly data-sly-test="${hero.icon}">
+                        <div class="hero-icon">
+                            <img src="${hero.icon}" alt="Hero icon" />
+                        </div>
+                    </sly>
+                    <h2 class="eyebrow">${hero.eyebrow}</h2>
+                    <h1>${hero.title}</h1>
+                    <p>${hero.description}</p>
+                    <sly data-sly-test="${hero.link && hero.ctaText}">
+                        <div>
+                            <a class="wp-btn-green" href="${hero.link}" target="_self">${hero.ctaText}</a>
+                        </div>
+                    </sly>
+                </div>
+            </div>
+            <div class="image-box-wrapper">
+                <sly data-sly-test="${hero.showImage && hero.fileReference}">
+                    <div class="image-box">
+                        <img src="${hero.fileReference}" alt="Hero image" />
+                    </div>
+                </sly>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* :root {
+             --heroBackgroundImageUrl: url(${properties.fileReference @ context='styleString'}) !important;
+             --heroBackgroundColor:#${properties.bgolor @ context='styleString'} !important;
+         } */
+</style>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+
