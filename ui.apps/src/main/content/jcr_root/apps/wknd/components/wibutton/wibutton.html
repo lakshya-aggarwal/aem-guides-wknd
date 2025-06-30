@@ -1,0 +1,21 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientLib.all @ categories='wknd.button.v2'}"/>
+<sly data-sly-use.button="com.adobe.aem.guides.wknd.core.models.Button">
+</sly>
+
+<!-- <sly data-sly-resource="${@path='button', resourceType='wknd/components/button'}"/> -->
+
+<a data-sly-test="${button.link}"
+   href="${button.link}"
+   class="button button--${button.style} ${button.customClass}"
+   target="${button.openInNewTab ? '_blank' : '_self'}"
+   rel="${button.openInNewTab ? 'noopener noreferrer' : ''}">
+    <span data-sly-test="${button.icon}" class="button__icon">${button.icon}</span>
+    <span class="button__label">${button.label}</span>
+</a>
+<button data-sly-test="${!button.link}"
+        class="button button--${button.style} ${button.customClass}">
+    <span data-sly-test="${button.icon}" class="button__icon">${button.icon}</span>
+    <span class="button__label">${button.label}</span>
+</button>
+<!-- Button v2 --> 
